@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>classes and objects</title>
+</head>
+<body>
+	<script>
+		class student{
+			constructor(studentName,studentEmail){
+				this.studentName=studentName;
+				this.studentEmail=studentEmail;
+			}
+			studentList=[];
+			getStudentsInfo(){
+				return {name:this.name,email:this.email};
+			}
+			addSubject(name){
+				this.studentList.push(name);
+			}
+			getSubjectInfo(){
+				return this.studentList
+			}
+
+		}
+		var studentObj=new student("Anil","anil@123.com");
+		console.log(studentObj.getStudentsInfo()); 
+	</script>
+
+</body>
+</html>
